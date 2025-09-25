@@ -12,6 +12,7 @@ get_header();
     get_template_part('template-parts/faq');
     get_template_part('template-parts/blogs');
     get_template_part('template-parts/contact');
+    get_template_part('template-parts/refer');
   ?>
 </main>
 <?php get_footer(); ?>

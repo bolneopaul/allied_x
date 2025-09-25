@@ -24,6 +24,7 @@ function mytheme_fallback_menu() {
 // Enqueue CSS/JS
 function mytheme_enqueue_assets() {
   wp_enqueue_style('mytheme-main', get_template_directory_uri() . '/assets/css/main.css');
+  wp_enqueue_style('mytheme-footer', get_template_directory_uri() . '/assets/css/footer.css');
   wp_enqueue_script('mytheme-main', get_template_directory_uri() . '/assets/js/main.js', [], false, true);
 
   if (is_front_page()) {
