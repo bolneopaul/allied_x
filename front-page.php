@@ -10,6 +10,8 @@ get_header();
     get_template_part('template-parts/services');
     get_template_part('template-parts/reviews');
     get_template_part('template-parts/faq');
+    get_template_part('template-parts/blogs');
+    get_template_part('template-parts/contact');
   ?>
 </main>
 <?php get_footer(); ?>

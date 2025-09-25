@@ -1,3 +1,408 @@
+/* Blogs Section Styles */
+.blogs-section {
+  background: #0a0613;
+  color: #fff;
+  padding: 4rem 0 3rem 0;
+  text-align: left;
+  position: relative;
+}
+.blogs-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.blogs-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2d115c;
+  color: #7c3aed;
+  margin-bottom: 0.5rem;
+}
+.blogs-header .highlight {
+  color: #7c3aed;
+}
+.blogs-sub {
+  color: #e0d7f7;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.view-blogs-btn {
+  background: #7c3aed;
+  color: #fff;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  display: inline-block;
+  margin-left: auto;
+}
+.view-blogs-btn:hover {
+  background: #2e6be6;
+  color: #fff;
+}
+.blogs-slider-wrapper {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.blogs-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blogs-track {
+  display: flex;
+  gap: 2rem;
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.2s;
+}
+.blogs-track.dragging {
+  cursor: grabbing;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(124,58,237,0.06);
+  min-width: 320px;
+  max-width: 350px;
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.blog-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+.blog-content {
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  color: #2d115c;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.blog-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #2d115c;
+}
+.blog-content p {
+  color: #6b4bb6;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.blog-read {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+}
+.blog-read:hover {
+  color: #2e6be6;
+}
+@media (max-width: 1200px) {
+  .blogs-track { gap: 1rem; }
+  .blog-card { min-width: 240px; max-width: 260px; flex-basis: 240px; }
+}
+@media (max-width: 900px) {
+  .blogs-header { flex-direction: column; align-items: flex-start; }
+  .blog-card { min-width: 180px; max-width: 200px; flex-basis: 180px; }
+}
+@media (max-width: 600px) {
+  .blogs-header h2 { font-size: 1.2rem; }
+  .blog-card { padding: 0.5rem; }
+  .blog-image img { height: 120px; }
+}
+/* FAQ Section Styles */
+.faq-section {
+  background: linear-gradient(180deg, #f3eaff 60%, #a084e8 100%);
+  border-radius: 32px 32px 48px 48px;
+  padding: 3.5rem 0 2.5rem 0;
+  margin: 3rem 0 0 0;
+  box-shadow: 0 4px 32px rgba(124,58,237,0.08);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.faq-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2d115c;
+  margin-bottom: 0.5rem;
+}
+.faq-header .highlight {
+  color: #7c3aed;
+}
+.faq-sub {
+  color: #7c3aed;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item.active {
+  box-shadow: 0 4px 24px rgba(124,58,237,0.13);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2d115c;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #7c3aed;
+  margin-left: 1rem;
+  font-weight: 700;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f3eaff;
+  transition: background 0.2s, color 0.2s;
+}
+.faq-item.active .faq-toggle {
+  background: #7c3aed;
+  color: #fff;
+}
+.faq-answer {
+  display: none;
+  padding: 0 1.5rem 1.2rem 1.5rem;
+  color: #6b4bb6;
+  font-size: 1rem;
+  border-top: 1px solid #f3eaff;
+  animation: fadeIn 0.3s;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.faq-refer {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.faq-section .refer-btn {
+  background: #7c3aed;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  border-radius: 2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  display: inline-block;
+}
+.faq-section .refer-btn:hover {
+  background: #2e6be6;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .faq-section { padding: 2rem 0.5rem; border-radius: 18px 18px 32px 32px; }
+  .faq-header h2 { font-size: 1.3rem; }
+  .faq-question { font-size: 1rem; padding: 1rem 1rem; }
+}
+/* Reviews Section Styles */
+.reviews-section {
+  background: #0a0613;
+  color: #fff;
+  padding: 4rem 0 3rem 0;
+  text-align: left;
+  position: relative;
+}
+.reviews-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.reviews-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2d115c;
+  color: #7c3aed;
+  margin-bottom: 0.5rem;
+}
+.reviews-header .highlight {
+  color: #7c3aed;
+}
+.reviews-sub {
+  color: #e0d7f7;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.reviews-slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.reviews-slider {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-track {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.review-card {
+  display: none;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 340px;
+  background: transparent;
+  border-radius: 24px;
+  box-shadow: none;
+  margin: 0 auto;
+  align-items: stretch;
+  gap: 0;
+  position: relative;
+}
+.review-card.active {
+  display: flex;
+}
+.review-content {
+  flex: 2 1 0;
+  padding: 2.5rem 2rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.review-content blockquote {
+  font-size: 1.1rem;
+  color: #a18ad6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.review-content .review-author {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+.review-photo-bg {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.review-photo-card {
+  position: relative;
+  z-index: 2;
+  background: #f3eaff;
+  border-radius: 20px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 24px rgba(124,58,237,0.08);
+}
+.review-photo-card img {
+  width: 220px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.review-photo-bg::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 220px;
+  height: 260px;
+  background: #e9d8fd;
+  border-radius: 16px;
+  z-index: 1;
+}
+.reviews-nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.reviews-btn {
+  background: #f3eaff;
+  color: #7c3aed;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-btn.next {
+  background: #7c3aed;
+  color: #fff;
+}
+.reviews-btn:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .review-content { padding: 1.5rem 0.5rem 1.5rem 0.5rem; }
+  .review-photo-card img, .review-photo-bg::before { width: 140px; height: 160px; }
+  .review-photo-bg::before { top: 10px; }
+}
+@media (max-width: 600px) {
+  .reviews-header h2 { font-size: 1.3rem; }
+  .review-content { padding: 1rem 0.2rem; }
+  .review-photo-card img, .review-photo-bg::before { width: 90px; height: 100px; }
+}
 /* Services Section Styles */
 .services-section {
   background: #f3eaff;

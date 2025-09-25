@@ -32,6 +32,12 @@
           <p>Providing caring, professional support for your emotional wellbeing, resilience and mental health.</p>
           <a href="/services/psychology" class="service-arrow" aria-label="Read more">&#8594;</a>
         </div>
+        <div class="service-card">
+          <div class="service-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/psychology.png" alt="Psychology"></div>
+          <h3>Psychology</h3>
+          <p>Providing caring, professional support for your emotional wellbeing, resilience and mental health.</p>
+          <a href="/services/psychology" class="service-arrow" aria-label="Read more">&#8594;</a>
+        </div>
         <!-- Add more service cards as needed -->
       </div>
     </div>
