@@ -1,0 +1,15 @@
+.hero {
+  background: #f4f4f4;
+  padding: 3rem 0;
+  text-align: center;
+}
+.services .grid {
+  display: flex;
+  gap: 1rem;
+}
+.services .card {
+  flex: 1;
+  background: #eaeaea;
+  padding: 1rem;
+  text-align: center;
+}
