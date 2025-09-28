@@ -6,7 +6,6 @@ get_header();
   <?php 
     get_template_part('template-parts/carousel');
     get_template_part('template-parts/team');
-    get_template_part('template-parts/hero');
     get_template_part('template-parts/services');
     get_template_part('template-parts/reviews');
     get_template_part('template-parts/faq');

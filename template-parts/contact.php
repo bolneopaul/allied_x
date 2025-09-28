@@ -10,7 +10,7 @@
 				<span class="contact-phone-number">+44 123 654 7890</span>
 			</div>
 			<div class="contact-image">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-image.jpg" alt="Contact" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-image.png" alt="Contact" />
 			</div>
 		</div>
 		<form class="contact-form" method="post">

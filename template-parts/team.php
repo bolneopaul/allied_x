@@ -3,6 +3,7 @@
 ?>
 <section class="team-section">
   <div class="trusted-partners">
+        <div class="trusted-label">Trusted Partners</div>
     <div class="logos-carousel">
       <div class="logos-track">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/speech-pathology-australia.png" alt="Speech Pathology Australia">
@@ -24,7 +25,7 @@
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/arata.png" alt="ARATA">
       </div>
     </div>
-    <div class="trusted-label">Trusted Partners</div>
+
   </div>
   <div class="team-content">
     <div class="team-stats">

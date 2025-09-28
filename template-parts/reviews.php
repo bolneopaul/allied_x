@@ -22,7 +22,7 @@
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.jpg" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.jpg" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.jpg" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@
     <div class="services-slider">
       <div class="services-track">
         <div class="service-card">
-          <div class="service-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/occupational-therapy.png" alt="Occupational Therapy"></div>
+          <div class="service-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Group.png" alt="Occupational Therapy"></div>
           <h3>Occupational Therapy</h3>
           <p>Helping children, teens and adults to build skills for everyday life — from play and learning, to work, routines, recovery and independence.</p>
           <a href="/services/occupational-therapy" class="service-arrow" aria-label="Read more">&#8594;</a>

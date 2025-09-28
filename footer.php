@@ -2,7 +2,6 @@
 <footer class="site-footer">
   <div class="footer-main">
     <div class="footer-col footer-branding">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Meet Allied X.png" alt="Allied X Logo" class="footer-logo" />
       <p class="footer-ndis">Allied X is a registered NDIS provider.</p>
       <p class="footer-acknowledgement">
         Allied X acknowledges the Traditional Owners and custodians of the lands on which we serve our communities. We pay our respect to Elders past, present and emerging. We are committed to providing respectful, inclusive and accessible care in a supportive environment for all.
@@ -17,6 +16,9 @@
         </div>
         <small class="newsletter-privacy">By subscribing you agree to with our <a href="#">Privacy Policy</a></small>
       </form>
+    </div>
+    <div class="footer-col">
+      
     </div>
     <div class="footer-col footer-pages">
       <h4>Pages</h4>
