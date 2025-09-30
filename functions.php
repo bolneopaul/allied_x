@@ -11,7 +11,7 @@ add_action('after_setup_theme', 'mytheme_setup');
 // Fallback menu for header
 function mytheme_fallback_menu() {
   echo '<ul class="nav-menu">';
-  echo '<li><a href="/services">Services <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  echo '<li><a href="/myproject/services/">Services <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M3.25 6.21484L7.25 10.2148L11.25 6.21484" stroke="#250543" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       </a></li>';
@@ -35,6 +35,9 @@ function mytheme_enqueue_assets() {
 
   if (is_front_page()) {
     wp_enqueue_style('mytheme-home', get_template_directory_uri() . '/assets/css/home.css');
+  }
+  if (is_page_template('page-templates/page-services.php')) {
+    wp_enqueue_style('mytheme-services', get_template_directory_uri() . '/assets/css/services.css');
   }
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_assets');
