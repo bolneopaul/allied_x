@@ -77,12 +77,25 @@ if (!function_exists('esc_attr')) { function esc_attr($str) { return htmlspecial
   const prevBtn = document.querySelector('.services-nav.prev');
   const nextBtn = document.querySelector('.services-nav.next');
   let current = 0;
-  const visible = 4; // Number of visible cards
+  function getVisible() {
+    // Responsive: estimate visible cards based on container width and card width
+    const container = document.querySelector('.services-slider');
+    if (!container || cards.length === 0) return 1;
+    const cardWidth = cards[0].offsetWidth + 32; // 32px gap
+    return Math.max(1, Math.floor(container.offsetWidth / cardWidth));
+  }
   function updateSlider() {
     const cardWidth = cards[0].offsetWidth + 32; // 32px gap
+    const visible = getVisible();
+    // Clamp current so it never goes out of bounds
+    current = Math.max(0, Math.min(current, Math.max(0, cards.length - visible)));
     track.style.transform = `translateX(-${current * cardWidth}px)`;
+    // Optionally disable buttons if not needed
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= cards.length - visible;
   }
   nextBtn.addEventListener('click', () => {
+    const visible = getVisible();
     if (current < cards.length - visible) current++;
     updateSlider();
   });

@@ -39,19 +39,53 @@ if (!function_exists('esc_attr')) { function esc_attr($str) { return htmlspecial
 			</div>
 		</div>
 		<form class="contact-form" method="post">
-			<?php foreach ($contact_form_fields as $field): ?>
-				<?php if ($field['type'] === 'textarea'): ?>
-					<div class="contact-form-group">
-						<label><?php echo esc_html($field['label']); ?><?php if ($field['required']) echo ' <span class="required">*</span>'; ?></label>
-						<textarea name="<?php echo esc_attr($field['name']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>" rows="4"<?php if ($field['required']) echo ' required'; ?>></textarea>
-					</div>
-				<?php else: ?>
-					<div class="contact-form-group">
-						<label><?php echo esc_html($field['label']); ?><?php if ($field['required']) echo ' <span class="required">*</span>'; ?></label>
-						<input type="<?php echo esc_attr($field['type']); ?>" name="<?php echo esc_attr($field['name']); ?>" placeholder="<?php echo esc_attr($field['placeholder']); ?>"<?php if ($field['required']) echo ' required'; ?> />
-					</div>
-				<?php endif; ?>
-			<?php endforeach; ?>
+			<?php
+			$rowFields = [];
+			foreach ($contact_form_fields as $i => $field) {
+				// Textarea and single fields go in their own row
+				if ($field['type'] === 'textarea' || in_array($field['name'], ['title', 'message'])) {
+					if (!empty($rowFields)) {
+						echo '<div class="contact-form-row">';
+						foreach ($rowFields as $rf) {
+							echo '<div class="contact-form-group">';
+							echo '<label>' . esc_html($rf['label']) . ($rf['required'] ? ' <span class="required">*</span>' : '') . '</label>';
+							echo '<input type="' . esc_attr($rf['type']) . '" name="' . esc_attr($rf['name']) . '" placeholder="' . esc_attr($rf['placeholder']) . '"' . ($rf['required'] ? ' required' : '') . ' />';
+							echo '</div>';
+						}
+						echo '</div>';
+						$rowFields = [];
+					}
+					echo '<div class="contact-form-group">';
+					echo '<label>' . esc_html($field['label']) . ($field['required'] ? ' <span class="required">*</span>' : '') . '</label>';
+					echo '<textarea name="' . esc_attr($field['name']) . '" placeholder="' . esc_attr($field['placeholder']) . '" rows="4"' . ($field['required'] ? ' required' : '') . '></textarea>';
+					echo '</div>';
+				} else {
+					$rowFields[] = $field;
+					if (count($rowFields) === 2) {
+						echo '<div class="contact-form-row">';
+						foreach ($rowFields as $rf) {
+							echo '<div class="contact-form-group">';
+							echo '<label>' . esc_html($rf['label']) . ($rf['required'] ? ' <span class="required">*</span>' : '') . '</label>';
+							echo '<input type="' . esc_attr($rf['type']) . '" name="' . esc_attr($rf['name']) . '" placeholder="' . esc_attr($rf['placeholder']) . '"' . ($rf['required'] ? ' required' : '') . ' />';
+							echo '</div>';
+						}
+						echo '</div>';
+						$rowFields = [];
+					}
+				}
+			}
+			// Output any remaining fields
+			if (!empty($rowFields)) {
+				echo '<div class="contact-form-row">';
+				foreach ($rowFields as $rf) {
+					echo '<div class="contact-form-group">';
+					echo '<label>' . esc_html($rf['label']) . ($rf['required'] ? ' <span class="required">*</span>' : '') . '</label>';
+					echo '<input type="' . esc_attr($rf['type']) . '" name="' . esc_attr($rf['name']) . '" placeholder="' . esc_attr($rf['placeholder']) . '"' . ($rf['required'] ? ' required' : '') . ' />';
+					echo '</div>';
+				}
+				echo '</div>';
+			}
+			?>
 		</form>
 		<button type="submit" class="contact-submit-btn"><?php echo esc_html($contact_submit_text); ?></button>
 	</div>

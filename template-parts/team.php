@@ -48,6 +48,9 @@ if (!function_exists('esc_attr')) { function esc_attr($str) { return htmlspecial
         <?php foreach ($logos as $logo): ?>
           <img src="<?php echo esc_url($logo['src']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
         <?php endforeach; ?>
+        <?php foreach ($logos as $logo): ?>
+          <img src="<?php echo esc_url($logo['src']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+        <?php endforeach; ?>
       </div>
     </div>
   </div>

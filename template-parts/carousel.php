@@ -9,11 +9,20 @@ $carousel_slides = function_exists('get_query_var') ? get_query_var('carousel_sl
         <h1 class="refer-title">Supporting Your <span class="refer-highlight">Growth</span><br />Every Day</h1>
         <div class="refer-desc">We are a trusted national team of allied health professionals providing personalised care through the NDIS and private services.</div>
         <div style="display: flex; gap: 32px; margin-bottom: 32px;">
-          <div style="display: flex; align-items: center; gap: 10px;">[SVG1]<span>NDIS Registered</span></div>
-          <div style="display: flex; align-items: center; gap: 10px;">[SVG2]<span>Expert Therapists</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.8341 13.714C23.8341 7.73095 18.9839 2.8807 13.0008 2.8807C7.01773 2.8807 2.16748 7.73095 2.16748 13.714C2.16748 19.6971 7.01773 24.5474 13.0008 24.5474C18.9839 24.5474 23.8341 19.6971 23.8341 13.714Z" fill="#F4C941"/>
+<path d="M8.66748 14.5269C8.66748 14.5269 10.4008 15.5155 11.2675 16.9644C11.2675 16.9644 13.8675 11.2769 17.3341 9.3811" stroke="#250543" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <span>NDIS Registered</span></div>
+          <div style="display: flex; align-items: center; gap: 10px;"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.8341 13.714C23.8341 7.73095 18.9839 2.8807 13.0008 2.8807C7.01773 2.8807 2.16748 7.73095 2.16748 13.714C2.16748 19.6971 7.01773 24.5474 13.0008 24.5474C18.9839 24.5474 23.8341 19.6971 23.8341 13.714Z" fill="#F4C941"/>
+<path d="M8.66748 14.5269C8.66748 14.5269 10.4008 15.5155 11.2675 16.9644C11.2675 16.9644 13.8675 11.2769 17.3341 9.3811" stroke="#250543" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              <span>Expert Therapists</span></div>
         </div>
         <div style="display: flex; gap: 24px;">
-          <a href="#" class="refer-btn" style="background: #232B3A;">Refer Now</a>
+          <a href="#" class="refer-btn" style="background: #250543;">Refer Now</a>
           <a href="#" class="refer-btn" style="background: transparent; border: 1.5px solid #fff; color: #fff;">Our Services</a>
         </div>
       </div>
