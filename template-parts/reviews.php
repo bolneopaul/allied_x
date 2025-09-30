@@ -1,9 +1,3 @@
-<section class="reviews">
-  <div class="container">
-    <h2>Reviews</h2>
-  </div>
-</section>
-
 <section class="reviews-section">
   <div class="reviews-header">
     <h2>Real <span class="highlight">People</span>, Real <span class="highlight">Outcomes</span></h2>
@@ -19,10 +13,14 @@
               <p>Lauren from your Kingsgrove team has gone above and beyond to make me and my family feel that we belong, and that Allied X is a place that can help my son continue progressing in his therapies.</p>
             </blockquote>
             <div class="review-author">-ROB GALVIN, Marketing Manager at Metalogics</div>
+            <div class="reviews-nav">
+              <button class="reviews-btn prev" aria-label="Previous">&#8592;</button>
+              <button class="reviews-btn next" aria-label="Next">&#8594;</button>
+            </div>
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/review1.png" alt="Client photo">
             </div>
           </div>
         </div>
@@ -33,10 +31,14 @@
               <p>Lauren from your Kingsgrove team has gone above and beyond to make me and my family feel that we belong, and that Allied X is a place that can help my son continue progressing in his therapies.</p>
             </blockquote>
             <div class="review-author">-ROB GALVIN, Marketing Manager at Metalogics</div>
+            <div class="reviews-nav">
+              <button class="reviews-btn prev" aria-label="Previous">&#8592;</button>
+              <button class="reviews-btn next" aria-label="Next">&#8594;</button>
+            </div>
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/review1.png" alt="Client photo">
             </div>
           </div>
         </div>
@@ -47,37 +49,41 @@
               <p>Lauren from your Kingsgrove team has gone above and beyond to make me and my family feel that we belong, and that Allied X is a place that can help my son continue progressing in his therapies.</p>
             </blockquote>
             <div class="review-author">-ROB GALVIN, Marketing Manager at Metalogics</div>
+            <div class="reviews-nav">
+              <button class="reviews-btn prev" aria-label="Previous">&#8592;</button>
+              <button class="reviews-btn next" aria-label="Next">&#8594;</button>
+            </div>
           </div>
           <div class="review-photo-bg">
             <div class="review-photo-card">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/review1.png" alt="Client photo">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/review1.png" alt="Client photo">
             </div>
           </div>
         </div>
         <!-- Add more .review-card blocks for more reviews -->
       </div>
     </div>
-    <div class="reviews-nav">
-      <button class="reviews-btn prev" aria-label="Previous">&#8592;</button>
-      <button class="reviews-btn next" aria-label="Next">&#8594;</button>
-    </div>
+
   </div>
 </section>
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.review-card');
-  const prevBtn = document.querySelector('.reviews-btn.prev');
-  const nextBtn = document.querySelector('.reviews-btn.next');
   let current = 0;
   function showCard(idx) {
     cards.forEach((card, i) => card.classList.toggle('active', i === idx));
     current = idx;
   }
-  nextBtn.addEventListener('click', () => {
-    showCard((current + 1) % cards.length);
+  // Use event delegation for all nav buttons
+  document.querySelectorAll('.reviews-nav').forEach(function(nav) {
+    nav.querySelector('.reviews-btn.next').addEventListener('click', function(e) {
+      e.preventDefault();
+      showCard((current + 1) % cards.length);
+    });
+    nav.querySelector('.reviews-btn.prev').addEventListener('click', function(e) {
+      e.preventDefault();
+      showCard((current - 1 + cards.length) % cards.length);
+    });
   });
-  prevBtn.addEventListener('click', () => {
-    showCard((current - 1 + cards.length) % cards.length);
-  });
-})();
+});
 </script>

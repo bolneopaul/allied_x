@@ -1,12 +1,12 @@
 /* Refer Section Styles */
 .refer-section {
   position: relative;
-  background-image: url('../images/Supporting You.png');
+  background-image: url('../images/home/Supporting You.png');
   background-size: cover;
-  border-radius: 32px;
+  border-radius: 24px;
   margin: 48px auto;
-  max-width: 1200px;
-  min-height: 340px;
+  width: 1260px;
+  min-height: 390px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -57,11 +57,11 @@
   font-size: 18px;
   color: #f3f3f3;
   margin-bottom: 32px;
-  max-width: 678px;
+  max-width: 40%;
 }
-.refer-btn {
+.refer-btn_2 {
   display: inline-block;
-  background: #232B3A;
+  background: rgb(37  5 67);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -70,8 +70,10 @@
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(35,43,58,0.08);
   transition: background 0.2s;
+  width: 190px;
+  text-align: center;
 }
-.refer-btn:hover {
+.refer-btn_2:hover {
   background: #2B2540;
 }
 .refer-image {
@@ -111,32 +113,33 @@
 /* Contact Section Styles */
 .contact-section {
   background: #fff;
-  padding: 48px 0 48px 0;
+  padding: 48px;
 }
 .contact-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   gap: 48px;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 .contact-left {
-  flex: 1 1 380px;
-  min-width: 320px;
-  max-width: 480px;
+  flex: 1 1 600px;
+  min-width: 590px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 100%;
 }
 .contact-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 8px;
-  color: #7c3aed;
+  color: #000000;
 }
 .contact-desc {
-  color: #232B3A;
+  color: #9588A1;
   font-size: 1.1rem;
   margin-bottom: 12px;
 }
@@ -153,7 +156,7 @@
   vertical-align: middle;
 }
 .contact-phone-number {
-  color: #232B3A;
+  color: #575757;
   font-size: 1.1rem;
 }
 .contact-image {
@@ -163,7 +166,7 @@
 }
 .contact-image img {
   width: 100%;
-  height: 260px;
+  height: 411px;
   object-fit: cover;
   border-radius: 18px;
   display: block;
@@ -190,23 +193,23 @@
   gap: 6px;
 }
 .contact-form-group label {
-  color: #A259FF;
+  color: #250543;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 14px;
   margin-bottom: 2px;
 }
 .contact-form-group .required {
-  color: #A259FF;
+  color: red;
   margin-left: 2px;
 }
 .contact-form input,
 .contact-form textarea {
-  background: #ECECEC;
-  border: none;
+  background: rgb(247, 247, 247);
+  border: 1px solid rgb(236, 236, 236);
   border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 1em;
-  color: #232B3A;
+  padding: 16px;
+  font-size: 14px;
+  color: #575757;
   margin-bottom: 0;
   outline: none;
   box-shadow: 0 1px 4px rgba(124,58,237,0.04);
@@ -221,17 +224,18 @@
   resize: vertical;
 }
 .contact-submit-btn {
-  background: #A259FF;
+  background: #8021DE;
   color: #fff;
   border: none;
   border-radius: 32px;
   padding: 16px 0;
-  font-size: 1.25em;
-  font-weight: 600;
-  margin-top: 18px;
-  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  width: 211px;
   cursor: pointer;
   transition: background 0.2s;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-submit-btn:hover {
   background: #7c3aed;
@@ -255,30 +259,30 @@
 .blogs-section {
   background: #fff;
   color: #0a0613;
-  padding: 4rem 0 3rem 0;
+  padding: 4rem 4rem 3rem 4rem;
   text-align: left;
   position: relative;
 }
 .blogs-header {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 .blogs-header h2 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #2d115c;
-  color: #7c3aed;
+  color: #360E5D;
   margin-bottom: 0.5rem;
 }
 .blogs-header .highlight {
-  color: #7c3aed;
+  color: #8121DE;
 }
 .blogs-sub {
-  color: #e0d7f7;
+  width: 30%;
+  color: #9588A1;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -306,8 +310,7 @@
 }
 .blogs-slider {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1400px;
 }
 .blogs-track {
   display: flex;
@@ -315,17 +318,20 @@
   cursor: grab;
   user-select: none;
   transition: box-shadow 0.2s;
+  justify-content: space-between;
 }
 .blogs-track.dragging {
   cursor: grabbing;
 }
 .blog-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(227, 227, 227);
+  padding: 12px 12px 18px 12px;
   box-shadow: 0 2px 16px rgba(124,58,237,0.06);
   min-width: 320px;
-  max-width: 350px;
-  flex: 0 0 320px;
+  max-width: 404px;
+  flex: 0 0 404px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -335,7 +341,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 18px 18px 0 0;
+  border-radius: 18px;
   display: block;
 }
 .blog-content {
@@ -348,18 +354,18 @@
 }
 .blog-content h3 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0.7rem;
-  color: #2d115c;
+  color: #250543;
 }
 .blog-content p {
-  color: #6b4bb6;
+  color: #9588A1;
   font-size: 1rem;
   margin-bottom: 1.2rem;
 }
 .blog-read {
   color: #7c3aed;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   font-size: 1rem;
   display: inline-flex;
@@ -385,12 +391,12 @@
 }
 /* FAQ Section Styles */
 .faq-section {
-  background: linear-gradient(180deg, #f3eaff 60%, #a084e8 100%);
+  background-color: rgba(236, 217, 255, 0.2);
   border-radius: 32px 32px 48px 48px;
   padding: 3.5rem 2.5rem 2.5rem 2.5rem;
   margin: 3rem 0 0 0;
-  box-shadow: 0 4px 32px rgba(124,58,237,0.08);
-  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(124,58,237,0.08);
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -401,16 +407,20 @@
 .faq-header h2 {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #2d115c;
+  color: #360E5D;
   margin-bottom: 0.5rem;
 }
 .faq-header .highlight {
-  color: #7c3aed;
+  color: #8121DE;
 }
 .faq-sub {
-  color: #7c3aed;
+  color: #9588A1;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .faq-list {
   display: flex;
@@ -435,7 +445,7 @@
   outline: none;
   font-size: 1.15rem;
   font-weight: 600;
-  color: #2d115c;
+  color: #250543;
   padding: 1.2rem 1.5rem;
   text-align: left;
   display: flex;
@@ -446,16 +456,17 @@
 }
 .faq-toggle {
   font-size: 1.5rem;
-  color: #7c3aed;
+  font-weight: lighter;
+  color: #250543;
   margin-left: 1rem;
-  font-weight: 700;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f3eaff;
+  background: white;
+  border: 1px solid #EAEAEA;
   transition: background 0.2s, color 0.2s;
 }
 .faq-item.active .faq-toggle {
@@ -465,7 +476,7 @@
 .faq-answer {
   display: none;
   padding: 0 1.5rem 1.2rem 1.5rem;
-  color: #6b4bb6;
+  color: #9588A1;
   font-size: 1rem;
   border-top: 1px solid #f3eaff;
   animation: fadeIn 0.3s;
@@ -518,15 +529,14 @@
 .reviews-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #2d115c;
-  color: #7c3aed;
+  color: #360E5D;
   margin-bottom: 0.5rem;
 }
 .reviews-header .highlight {
-  color: #7c3aed;
+  color: #8121DE;
 }
 .reviews-sub {
-  color: #e0d7f7;
+  color: #9588A1;
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
 }
@@ -534,8 +544,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
 }
 .reviews-slider {
   width: 100%;
@@ -572,18 +580,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 .review-content blockquote {
   font-size: 1.1rem;
-  color: #a18ad6;
+  color: #250543;
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.review-content blockquote p {
+  margin-bottom: 1rem;
 }
 .review-content .review-author {
-  color: #fff;
+  color: #9588A1;
   font-size: 1rem;
   font-weight: 500;
-  margin-top: 1.5rem;
 }
 .review-photo-bg {
   flex: 1 1 0;
@@ -597,7 +608,6 @@
   z-index: 2;
   background: #f3eaff;
   border-radius: 20px;
-  padding: 0.5rem;
   box-shadow: 0 4px 24px rgba(124,58,237,0.08);
 }
 .review-photo-card img {
@@ -620,8 +630,8 @@
 }
 .reviews-nav {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 1rem;
+  justify-content: left;
   margin-top: 2rem;
 }
 .reviews-btn {
@@ -658,28 +668,29 @@
 }
 /* Services Section Styles */
 .services-section {
-  background: #f3eaff;
-  padding: 3rem 0 4rem 0;
-  text-align: center;
+  background: rgba(235, 215, 255, 0.2);
+  padding: 4rem;
+  text-align: left;
 }
 .services-header h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 800;
   color: #2d115c;
   margin-bottom: 0.5rem;
+  width: 50%;
 }
 .services-header .highlight {
   color: #7c3aed;
 }
 .services-sub {
-  color: #7c3aed;
+  color: #9588A1;
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
 }
 .services-slider-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -698,9 +709,9 @@
   border-radius: 20px;
   box-shadow: 0 2px 16px rgba(124,58,237,0.06);
   padding: 2rem 1.5rem 2.5rem 1.5rem;
-  min-width: 270px;
+  min-width: 300px;
   max-width: 300px;
-  flex: 0 0 270px;
+  flex: 0 0 300px;
   text-align: left;
   position: relative;
   display: flex;
@@ -780,17 +791,19 @@
   margin-top: 2.5rem;
 }
 .refer-btn {
-  background: #7c3aed;
+  background: #B564FD;
   color: #fff;
-  padding: 1rem 3.5rem;
+  padding: 15px 27px;
   border-radius: 2rem;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
   transition: background 0.2s, color 0.2s;
   border: none;
   display: inline-block;
+  width: 217px;
+  text-align: center;
 }
 .refer-btn:hover {
   background: #2e6be6;
@@ -811,29 +824,38 @@
 }
 /* Team Section Styles */
 .team-section {
-  margin: 3rem 0;
   padding: 2rem 0;
   background: #fff;
 }
 .trusted-partners {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 2rem;
   text-align: center;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .trusted-label {
-  margin-top: 1rem;
+  padding: 0px 30px 0px 30px;
   font-size: 1.1rem;
-  color: #888;
+  color: #360E5D;
   letter-spacing: 1px;
+  z-index: 2;
+  background: #fff;
 }
 .logos-carousel {
+  position: relative;
+  top: -10px;
+  display: flex;
   overflow: hidden;
-  width: 100%;
-  background: #faf9fd;
+  width: 1400px;
   border-radius: 16px;
-  border: 1px solid #eee;
-  padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  border: 1px solid #C3B0D4;
+  padding: 2.4rem 1rem 1.5rem 1rem;
+  justify-content: center;
+  align-items: center;
 }
 .logos-track {
   display: flex;
@@ -864,29 +886,28 @@
   align-items: stretch;
   justify-content: center;
   gap: 2rem;
-  border: 2px solid #2e6be6;
-  border-radius: 12px;
-  padding: 2rem 1rem;
+  padding: 4rem 2rem;
   background: #fff;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .team-stats {
-  flex: 1 1 180px;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 18px;
+  color: #9588A1;
   border-right: 1.5px dashed #2e6be6;
   padding-right: 1.5rem;
-  min-width: 150px;
+  min-width: 100px;
 }
 .team-stats .stat span {
-  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
   font-weight: 700;
-  color: #2e6be6;
+  color: #250543;
 }
 .team-image {
   flex: 1 1 300px;
@@ -911,6 +932,7 @@
   min-width: 220px;
 }
 .team-info h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
@@ -921,22 +943,24 @@
   font-weight: 800;
 }
 .team-info p {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
 }
 .team-btn {
   display: inline-block;
-  background: #7c3aed;
+  background: #8121DE;
   color: #fff;
-  padding: 0.7rem 2.2rem;
+  padding: 15px 27px;
   border-radius: 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 18px;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
   transition: background 0.2s, color 0.2s;
   border: none;
+  width: max-content;
 }
 .team-btn:hover {
   background: #2e6be6;

@@ -1,14 +1,16 @@
 <section class="blogs-section">
 	<div class="blogs-header">
-		<h2>Check Out Our <span class="highlight">Tips and Resources</span></h2>
+		<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+			<h2>Check Out Our <span class="highlight">Tips and Resources</span></h2>
+		  	<a href="/blogs" class="view-blogs-btn">View Blogs</a>
+		</div>
 		<div class="blogs-sub">Keep up to date with our practical resources, information and news</div>
-		<a href="/blogs" class="view-blogs-btn">View Blogs</a>
 	</div>
 	<div class="blogs-slider-wrapper">
 		<div class="blogs-slider">
 			<div class="blogs-track">
 				<div class="blog-card">
-					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blog1.png" alt="Allied X Out on the Field"></div>
+					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/blog1.png" alt="Allied X Out on the Field"></div>
 					<div class="blog-content">
 						<h3>Allied X Out on the Field</h3>
 						<p>As the season comes to a close, we look back on a phenomenal year sponsoring Player 11 of the Canterbury-Bankstown Bulldogs.</p>
@@ -16,7 +18,7 @@
 					</div>
 				</div>
 				<div class="blog-card">
-					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blog2.png" alt="Allied X Expands to Melbourne & Adelaide"></div>
+					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/blog2.png" alt="Allied X Expands to Melbourne & Adelaide"></div>
 					<div class="blog-content">
 						<h3>Allied X Expands to Melbourne & Adelaide</h3>
 						<p>We’re excited to announce that our Occupational Therapy services are now available in Melbourne and Adelaide!</p>
@@ -24,7 +26,7 @@
 					</div>
 				</div>
 				<div class="blog-card">
-					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/blog3.png" alt="How Can Physiotherapy Help Your Child Or Teen?"></div>
+					<div class="blog-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home/blog3.png" alt="How Can Physiotherapy Help Your Child Or Teen?"></div>
 					<div class="blog-content">
 						<h3>How Can Physiotherapy Help Your Child Or Teen?</h3>
 						<p>Our Physiotherapists support children and young people to develop their physical abilities to participate in activities to their...</p>

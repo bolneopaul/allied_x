@@ -1,7 +1,7 @@
 <section class="contact-section" style="background:#fff;">
 	<div class="contact-container">
 		<div class="contact-left">
-			<h2 class="contact-title"><span style="color:#A259FF;">Journey Today</span></h2>
+			<h2 class="contact-title">Begin Your<span style="color:#A259FF;">Journey Today</span></h2>
 			<p class="contact-desc">We’ll use your details only to reach out and chat about how we can support your project.</p>
 			<div class="contact-phone">
 				<span class="contact-phone-icon">
@@ -10,7 +10,7 @@
 				<span class="contact-phone-number">+44 123 654 7890</span>
 			</div>
 			<div class="contact-image">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-image.png" alt="Contact" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/contact-image.png" alt="Contact" />
 			</div>
 		</div>
 		<form class="contact-form" method="post">
@@ -62,7 +62,7 @@
 				<label>Message</label>
 				<textarea name="message" placeholder="Write Something..." rows="4"></textarea>
 			</div>
-			<button type="submit" class="contact-submit-btn">Submit</button>
 		</form>
+		<button type="submit" class="contact-submit-btn">Submit</button>
 	</div>
 </section>
